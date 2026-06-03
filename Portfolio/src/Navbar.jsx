@@ -4,7 +4,6 @@ import { useState, useEffect  } from "react";
 function Navbar(){
 
     const [isMenu, setMenu]=useState(false);
-    const [isSearch, setSearch]=useState(false);
     const [isNav, setNav]= useState(true);
     
 
@@ -32,33 +31,33 @@ function Navbar(){
         };
     }, []); // <-- EMPTY ARRAY! This means React only creates the listener ONCE when the page loads!
 
-    function handleMenu(){
+     function handleMenu(){
         setMenu(!isMenu);
-        setSearch(false);
-    }
-
-     function handleSearch(){
-        setSearch(!isSearch);
-        setMenu(false);
     }
 
     return(
         <header>
             <div className={`navbar ${isNav ? "" : "hidden"}`}>
-                <div className="title">My Portfolio</div>
+                <div className="title">Madhav Gupta</div>
 
-                <div className={`search-container ${isSearch ? "active" : ""}`}>
-                    <input type="text" placeholder="Search..." className="search-bar" />
-                </div>
+  
                 <div className="mobile-icons">
-                    <button className="search-icon" onClick={handleSearch}>🔍</button>
                     <button className="menu" onClick={handleMenu}>{isMenu ?  "x": "☰"}</button>
                 </div>
                 
                 <div className={`nav-btns ${isMenu ? "active" : ""}`}>
-                    <button className="about">About Me</button>
                     <button className="blog">Blog</button>
-                    <button className="socials">Socials</button>
+                    <div>
+                        <a className="linkedin" href="https://www.linkedin.com/in/madhavgupta27/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                        </div>
+                    <div>
+                        <a className="github" href="https://github.com/Madhav27306" target="_blank" rel="noopener noreferrer">Github</a>
+                    </div>
+                    <div>
+                        <a className="resume" href="/FMadhavGResume.pdf" target="_blank" rel="noopener noreferrer">
+                            Resume
+                        </a>
+                    </div>
                 </div>
             </div>
             
