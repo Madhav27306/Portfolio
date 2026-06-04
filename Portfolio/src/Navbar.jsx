@@ -8,32 +8,28 @@ function Navbar(){
     
 
    useEffect(() => {
-        // 1. We create a simple local variable to remember the last position
         let lastScrollY = window.scrollY;
 
-        // 2. We move the controlNav brain INSIDE the effect
         const controlNav = () => {
             if (window.scrollY > lastScrollY && window.scrollY > 200) {
                 setNav(false); 
             } else {
                 setNav(true);  
-            }
-            // Update the local variable for the next tick
+            }    
             lastScrollY = window.scrollY; 
         };
 
-        // 3. Attach the listener
         window.addEventListener('scroll', controlNav);
-
-        // 4. Cleanup
+        
         return () => {
             window.removeEventListener('scroll', controlNav);
         };
-    }, []); // <-- EMPTY ARRAY! This means React only creates the listener ONCE when the page loads!
+    }, []); 
 
      function handleMenu(){
         setMenu(!isMenu);
     }
+
 
     return(
         <header>
@@ -46,7 +42,6 @@ function Navbar(){
                 </div>
                 
                 <div className={`nav-btns ${isMenu ? "active" : ""}`}>
-                    <button className="blog">Blog</button>
                     <div>
                         <a className="linkedin" href="https://www.linkedin.com/in/madhavgupta27/" target="_blank" rel="noopener noreferrer">Linkedin</a>
                         </div>

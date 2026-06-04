@@ -1,0 +1,101 @@
+.footer {
+  background-color: rgb(5, 5, 5); 
+  padding: 80px 10% 40px 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 20vh;
+  box-sizing: border-box;
+  
+  
+  border-top: 1px solid rgba(255, 255, 255, 0.05); 
+}
+
+
+.footer-title {
+  font-size: clamp(2rem, 6vw, 6rem);
+  font-weight: 700;
+  color: #F4F4F0;
+  margin: 0 0 30px 0;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+}
+
+/* The Email Link Hover Effect */
+.email-link {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  color: #888888;
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.email-link:hover {
+  color: #F4F4F0;
+  border-bottom: 2px solid #F4F4F0;
+}
+
+/* The Bottom Bar */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: auto; /* Pushes it to the very bottom */
+  padding-top: 80px;
+}
+
+.social-links {
+  display: flex;
+  gap: 30px;
+}
+
+.social-links a {
+  color: #888888;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #F4F4F0;
+}
+
+.footer-info {
+  text-align: right;
+  color: #666666;
+  font-size: 0.9rem;
+}
+
+.footer-info p {
+  margin: 0 0 10px 0;
+}
+
+.back-to-top {
+  background: none;
+  border: none;
+  color: #888888;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.3s ease;
+  font-family: inherit;
+}
+
+.back-to-top:hover {
+  color: #F4F4F0;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  
+  .footer-info {
+    text-align: left;
+  }
+}

@@ -1,0 +1,28 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+  padding: 0 10%; 
+  box-sizing: border-box;
+}
+
+
+.hero-content .subtitle {
+  font-size: 2rem;
+  color: #888888;
+  margin: 10px 0 0 0;
+}
+
+.hero-content .description {
+  font-size: 1.2rem;
+  color: #666666;
+  margin-top: 30px;
+  max-width: 600px;
+}
+.scramble-span {
+  display: inline-block;
+  font-variant-numeric: tabular-nums;
+}
