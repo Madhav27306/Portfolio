@@ -1,61 +1,49 @@
+import { useHexDecode } from "./hooks/useHexDecode";
 import "./Hero.css";
-import { useState, useEffect } from "react";
 
- function ScrambleText({ text }) {
-        const [displayText, setDisplayText] = useState(text);
-        const chars = "01X8FA4000lw$a0$sp<>{}[]*^%~&#@";
+const Hero = () => {
+  // Configurable delays so lines decode sequentially like a real terminal
+  const title = useHexDecode("Hi, I'm Madhav.", 300);
+  const tagline = useHexDecode("From Assembly to React.", 1200);
+  const roles = useHexDecode("> Compilers | Cybersecurity | Full-Stack", 2200);
 
-        
-        const scramble = () => {
-        let iteration = 0;
-        
-        // Changed to 20ms for a smoother, higher frame rate
-        const interval = setInterval(() => {
-        setDisplayText((prev) => 
-            prev
-            .split("")
-            .map((letter, index) => {
-                if (index < iteration) {
-                return text[index];
-                }
-                return chars[Math.floor(Math.random() * chars.length)];
-            })
-            .join("")
-        );
+  return (
+    <section className="hero-container">
+      {/* Dynamic Background Grid */}
+      <div className="hero-grid-bg"></div>
 
-            if (iteration >= text.length) {
-                clearInterval(interval);
-            }
-
-            iteration += 1 / 4; 
-            }, 20);
-        };
-
-    useEffect(() => {
-        scramble();
-    }, []);
-    
-    return (
-        <span className="scramble-span">
-        {displayText}
-        </span>
-    );
-    }
-
-function Hero(){
-
-
-    return (
-    <section className="hero">
       <div className="hero-content">
-        <h1><ScrambleText text="From Assembly to React." /></h1>
-        <p className="subtitle"><ScrambleText text="Systems & Frontend Engineer" /></p>
-        <p className="description">
-          <ScrambleText text="Bridging the gap between low-level architecture and high-performance interactive interfaces." />
+        {/* Availability Pill */}
+        <div className="status-pill">
+          <span className="pulse-dot"></span>
+          <span className="status-text">Available Fall 2026 / Summer 2027</span>
+        </div>
+
+        {/* Main Typography */}
+        <h1 className="hero-title">{title}</h1>
+        <h2 className="hero-tagline">{tagline}</h2>
+        <p className="hero-roles terminal-font">
+          {roles}
+          <span className="blinking-cursor">_</span>
         </p>
+
+        {/* Call to Actions */}
+        <div className="hero-actions">
+          <a href="#projects" className="btn-primary">
+            View Systems
+          </a>
+          <a
+            href="/FMadhavGResume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary"
+          >
+            cat resume.pdf
+          </a>
+        </div>
       </div>
     </section>
   );
-}
+};
 
 export default Hero;

@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Lenis from '@studio-freight/lenis';
 import Navbar from './Navbar';
 import Hero from './Hero';
+import Skills from './Skills';
 import Projects from './Projects';
 import Footer from './Footer';
 import './App.css';
@@ -31,6 +32,7 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      <Skills />
       <Projects />
       <Footer />
       

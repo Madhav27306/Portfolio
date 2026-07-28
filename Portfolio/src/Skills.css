@@ -1,0 +1,138 @@
+.skills-container {
+  padding: 4rem 10%;
+  background-color: #0a0a0a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.terminal-window {
+  width: 100%;
+  max-width: 850px;
+  background-color: #121212;
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.terminal-header {
+  background-color: #1e1e1e;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  position: relative;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 8px;
+  position: absolute;
+}
+
+.skills-container .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.skills-container .dot.red {
+  background-color: #ff5f56;
+}
+
+.skills-container .dot.yellow {
+  background-color: #ffbd2e;
+}
+
+.skills-container .dot.green {
+  background-color: #27c93f;
+}
+
+.terminal-title {
+  flex: 1;
+  text-align: center;
+  color: #888;
+  font-family: "Fira Code", "Courier New", monospace;
+  font-size: 0.85rem;
+}
+
+.terminal-body {
+  padding: 1.5rem;
+  color: #e5e5e5;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.terminal-body.terminal-font {
+  font-family: "Fira Code", "Courier New", monospace;
+}
+
+.command-line {
+  margin-bottom: 1.2rem;
+  color: #fff;
+}
+
+.prompt {
+  color: #4ade80; /* Bright green prompt */
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.output-line {
+  margin-bottom: 0.3rem;
+  padding-left: 0.5rem;
+}
+
+.output-line.title {
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.status-dot {
+  color: #22c55e;
+  font-size: 1.2rem;
+  margin-right: 8px;
+}
+
+.label {
+  color: #888;
+  display: inline-block;
+  width: 85px;
+}
+
+.active-text {
+  color: #22c55e;
+  font-weight: bold;
+}
+
+.tree {
+  margin-left: 2rem;
+  color: #a1a1aa;
+}
+
+.category {
+  color: #60a5fa; /* Blue for directories/categories */
+  font-weight: bold;
+}
+
+@media (max-width: 900px) {
+  .skills-container {
+    padding: 3rem 5%;
+  }
+
+  .terminal-body {
+    padding: 1.1rem;
+    font-size: 0.82rem;
+    overflow-x: auto;
+  }
+
+  .label {
+    width: 75px;
+  }
+
+  .tree {
+    margin-left: 0.75rem;
+  }
+}
