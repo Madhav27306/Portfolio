@@ -33,10 +33,12 @@ const Hero = () => {
             View Systems
           </a>
           <a
-            href="/FMadhavGResume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/SecurityResume.pdf"
             className="btn-secondary"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open("/SecurityResume.pdf", "_blank", "noopener,noreferrer");
+            }}
           >
             cat resume.pdf
           </a>

@@ -49,7 +49,7 @@ function Navbar(){
                         <a className="github" href="https://github.com/Madhav27306" target="_blank" rel="noopener noreferrer">Github</a>
                     </div>
                     <div>
-                        <a className="resume" href="//SecurityResume.pdf" target="_blank" rel="noopener noreferrer">
+                        <a className="resume" href="/SecurityResume.pdf" target="_blank" rel="noopener noreferrer">
                             Resume
                         </a>
                     </div>
