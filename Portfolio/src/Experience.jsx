@@ -55,7 +55,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section className="experience-section" id="experience">
+    <div className="experience-panel" id="experience">
       <div className="experience-shell">
         <header className="experience-heading">
           <p className="experience-command">
@@ -114,7 +114,7 @@ const Experience = () => {
           ))}
         </ol>
       </div>
-    </section>
+    </div>
   );
 };
 

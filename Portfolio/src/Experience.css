@@ -1,12 +1,11 @@
-.experience-section {
-  padding: 5rem 10%;
-  background: #0a0a0a;
+.experience-panel {
+  width: 100%;
   scroll-margin-top: 72px;
 }
 
 .experience-shell {
   width: 100%;
-  max-width: 1000px;
+  max-width: none;
   margin: 0 auto;
 }
 
@@ -219,17 +218,7 @@
   }
 }
 
-@media (max-width: 900px) {
-  .experience-section {
-    padding: 4rem 5%;
-  }
-}
-
 @media (max-width: 480px) {
-  .experience-section {
-    padding: 3.5rem 1rem;
-  }
-
   .experience-card {
     padding: 1rem;
   }

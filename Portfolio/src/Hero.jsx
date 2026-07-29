@@ -1,40 +1,40 @@
-import { useHexDecode } from "./hooks/useHexDecode";
 import "./Hero.css";
 
 const Hero = () => {
-  // Configurable delays so lines decode sequentially like a real terminal
-  const title = useHexDecode("Hi, I'm Madhav.", 300);
-  const tagline = useHexDecode("From Assembly to React.", 1200);
-  const roles = useHexDecode("> Compilers | Cybersecurity | Full-Stack", 2200);
-
   return (
     <section className="hero-container">
       {/* Dynamic Background Grid */}
       <div className="hero-grid-bg"></div>
 
       <div className="hero-content">
-        <div className="hero-heading-group">
-          <h1 className="hero-title">{title}</h1>
-
-          {/* Availability Pill */}
-          <div className="status-pill">
-            <span className="pulse-dot"></span>
-            <span className="status-text">
-              Available Fall 2026 / Summer 2027
-            </span>
-          </div>
+        {/* Availability Pill */}
+        <div className="status-pill">
+          <span className="pulse-dot"></span>
+          <span className="status-text">
+            Available Fall 2026 / Summer 2027
+          </span>
         </div>
 
-        {/* Main Typography */}
-        <h2 className="hero-tagline">{tagline}</h2>
-        <p className="hero-roles terminal-font">
-          {roles}
-          <span className="blinking-cursor">_</span>
+        <h1
+          className="hero-terminal terminal-font"
+          aria-label="Computer Science at Stony Brook, Cybersecurity and AppSec"
+        >
+          &gt; Computer Science @ Stony Brook | Cybersecurity &amp; AppSec
+          <span className="blinking-cursor" aria-hidden="true">
+            _
+          </span>
+        </h1>
+
+        <p className="hero-bio">
+          I break software to understand exactly how systems fit together. Focused
+          on low-level architecture, network interactions, and secure-by-default
+          development. Currently building SOC detection environments and OWASP
+          remediations using Splunk, React, and Linux.
         </p>
 
         {/* Call to Actions */}
         <div className="hero-actions">
-          <a href="#projects" className="btn-primary">
+          <a href="#showcase" className="btn-primary">
             View Systems
           </a>
           <a
