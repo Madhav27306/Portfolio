@@ -114,10 +114,16 @@
           transition: all 0.2s ease;
         }
 
-        .github-btn:hover {
-          transform: translateY(-2px);
-          background-color: #fff;
-          box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+        .github-btn:active {
+          transform: scale(0.96);
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+          .github-btn:hover {
+            transform: translateY(-2px);
+            background-color: #fff;
+            box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+          }
         }
 
         .ide-terminal {
@@ -164,10 +170,36 @@
   
       .ide-body { 
         grid-template-columns: 1fr; 
-        padding: 30px; 
+        padding: 24px; 
       }
   
       .ide-terminal { 
         overflow-x: auto; 
       }
+}
+
+@media (max-width: 480px) {
+  .project-ide {
+    width: calc(100% - 24px);
+  }
+
+  .ide-header {
+    padding: 12px;
+  }
+
+  .ide-dots {
+    margin-right: 10px;
+  }
+
+  .ide-title {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .ide-body {
+    gap: 24px;
+    padding: 18px 14px;
+  }
 }

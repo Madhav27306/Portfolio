@@ -27,7 +27,7 @@ function Navbar(){
     }, []); 
 
      function handleMenu(){
-        setMenu(!isMenu);
+        setMenu((open) => !open);
     }
 
 
@@ -38,10 +38,23 @@ function Navbar(){
 
   
                 <div className="mobile-icons">
-                    <button className="menu" onClick={handleMenu}>{isMenu ?  "x": "☰"}</button>
+                    <button
+                        type="button"
+                        className="menu"
+                        onClick={handleMenu}
+                        aria-expanded={isMenu}
+                        aria-controls="primary-navigation"
+                        aria-label={isMenu ? "Close navigation menu" : "Open navigation menu"}
+                    >
+                        {isMenu ? "x" : "☰"}
+                    </button>
                 </div>
                 
-                <div className={`nav-btns ${isMenu ? "active" : ""}`}>
+                <nav
+                    id="primary-navigation"
+                    className={`nav-btns ${isMenu ? "active" : ""}`}
+                    aria-label="Primary navigation"
+                >
                     <div>
                         <a className="linkedin" href="https://www.linkedin.com/in/madhavgupta27/" target="_blank" rel="noopener noreferrer">Linkedin</a>
                         </div>
@@ -53,7 +66,7 @@ function Navbar(){
                             Resume
                         </a>
                     </div>
-                </div>
+                </nav>
             </div>
             
         </header>

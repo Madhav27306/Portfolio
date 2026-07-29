@@ -1,5 +1,24 @@
 import "./Skills.css";
 
+const skillGroups = [
+  {
+    label: "Languages",
+    skills: ["Python", "C", "Java", "JavaScript", "Node.js", "SQL"],
+  },
+  {
+    label: "DevOps / Cloud",
+    skills: ["AWS", "VPC / EKS", "Docker", "Terraform", "CI/CD", "Linux"],
+  },
+  {
+    label: "Security",
+    skills: ["Splunk", "Wireshark", "Trivy", "Checkov", "MITRE ATT&CK"],
+  },
+  {
+    label: "Frameworks",
+    skills: ["React", "MongoDB", "PostgreSQL", "REST APIs"],
+  },
+];
+
 const Skills = () => {
   return (
     <section className="skills-container" id="skills">
@@ -22,7 +41,8 @@ const Skills = () => {
           </div>
 
           <div className="output-line title">
-            <span className="status-dot">●</span> madhav-gupta.service - Systems,
+            <span className="status-dot">●</span>{" "}
+            <span className="service-name">madhav-gupta.service</span> - Systems,
             Security &amp; Full-Stack Engineer
           </div>
           <div className="output-line">
@@ -45,22 +65,19 @@ const Skills = () => {
             /system.slice/madhav-gupta.service
           </div>
 
-          {/* Tech Stack Tree mapped from resume */}
-          <div className="output-line tree">
-            ├─ <span className="category">Core_Languages</span>: Python, C,
-            Java, JavaScript (Node.js), SQL
-          </div>
-          <div className="output-line tree">
-            ├─ <span className="category">DevOps_Cloud</span>: AWS (VPC/EKS),
-            Docker, Terraform, CI/CD, Linux
-          </div>
-          <div className="output-line tree">
-            ├─ <span className="category">Security_Tools</span>: Splunk,
-            Wireshark, Trivy, Checkov, MITRE ATT&amp;CK
-          </div>
-          <div className="output-line tree">
-            └─ <span className="category">Frameworks_DBs</span>: React.js,
-            MongoDB, PostgreSQL, RESTful APIs
+          <div className="skills-grid" aria-label="Technical skills">
+            {skillGroups.map((group) => (
+              <div className="skill-group" key={group.label}>
+                <h3 className="skill-group-title">{group.label}</h3>
+                <div className="skill-chips">
+                  {group.skills.map((skill) => (
+                    <span className="skill-chip" key={skill}>
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

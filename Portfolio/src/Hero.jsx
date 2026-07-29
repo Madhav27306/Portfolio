@@ -13,14 +13,19 @@ const Hero = () => {
       <div className="hero-grid-bg"></div>
 
       <div className="hero-content">
-        {/* Availability Pill */}
-        <div className="status-pill">
-          <span className="pulse-dot"></span>
-          <span className="status-text">Available Fall 2026 / Summer 2027</span>
+        <div className="hero-heading-group">
+          <h1 className="hero-title">{title}</h1>
+
+          {/* Availability Pill */}
+          <div className="status-pill">
+            <span className="pulse-dot"></span>
+            <span className="status-text">
+              Available Fall 2026 / Summer 2027
+            </span>
+          </div>
         </div>
 
         {/* Main Typography */}
-        <h1 className="hero-title">{title}</h1>
         <h2 className="hero-tagline">{tagline}</h2>
         <p className="hero-roles terminal-font">
           {roles}
