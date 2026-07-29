@@ -1,6 +1,12 @@
+import { useHexDecode } from "./hooks/useHexDecode";
 import "./Hero.css";
 
+const HERO_HEADLINE =
+  "> Computer Science @ Stony Brook | Cybersecurity & AppSec";
+
 const Hero = () => {
+  const headline = useHexDecode(HERO_HEADLINE, 300);
+
   return (
     <section className="hero-container">
       {/* Dynamic Background Grid */}
@@ -19,8 +25,13 @@ const Hero = () => {
           className="hero-terminal terminal-font"
           aria-label="Computer Science at Stony Brook, Cybersecurity and AppSec"
         >
-          &gt; Computer Science @ Stony Brook | Cybersecurity &amp; AppSec
-          <span className="blinking-cursor" aria-hidden="true">
+          {headline}
+          <span
+            className={`blinking-cursor ${
+              headline === HERO_HEADLINE ? "visible" : ""
+            }`}
+            aria-hidden="true"
+          >
             _
           </span>
         </h1>
