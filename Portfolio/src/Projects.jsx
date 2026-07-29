@@ -3,8 +3,8 @@ import InteractiveTerminal from "./InteractiveTerminal";
 
 export default function Projects() {
   return (
-    <section className="projects-track" id="projects">
-      <div className="project-ide" id="panel-1">
+    <div className="projects-list" id="projects">
+      <article className="project-ide">
         <div className="ide-header">
           <div className="ide-dots">
             <span className="dot red"></span>
@@ -56,10 +56,9 @@ export default function Projects() {
             ]}
           />
         </div>
-      </div>
+      </article>
 
-      <div className="project-panel" id="panel-2">
-        <div className="project-ide">
+      <article className="project-ide">
           <div className="ide-header">
             <div className="ide-dots">
               <span className="dot red"></span>
@@ -114,8 +113,7 @@ export default function Projects() {
               ]}
             />
           </div>
-        </div>
-      </div>
-    </section>
+      </article>
+    </div>
   );
 }

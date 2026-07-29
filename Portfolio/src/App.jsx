@@ -2,9 +2,8 @@ import { useEffect } from 'react';
 import Lenis from 'lenis';
 import Navbar from './Navbar';
 import Hero from './Hero';
+import Showcase from './Showcase';
 import Skills from './Skills';
-import Experience from './Experience';
-import Projects from './Projects';
 import Footer from './Footer';
 import './App.css';
 
@@ -33,9 +32,8 @@ function App() {
     <>
       <Navbar />
       <Hero />
+      <Showcase />
       <Skills />
-      <Experience />
-      <Projects />
       <Footer />
       
     </>
