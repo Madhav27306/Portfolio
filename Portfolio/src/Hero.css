@@ -92,6 +92,10 @@
 }
 
 .blinking-cursor {
+  opacity: 0;
+}
+
+.blinking-cursor.visible {
   animation: blink 1s step-end infinite;
 }
 
