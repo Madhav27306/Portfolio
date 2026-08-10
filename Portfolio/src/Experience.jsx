@@ -32,7 +32,7 @@ const experiences = [
     ],
   },
   {
-    role: "Frontend Web Developer Intern",
+    role: "Software Engineering Intern",
     organization: "Manras Technologies",
     location: "Zirakpur, India",
     duration: "Jun 2025 – Aug 2025",
