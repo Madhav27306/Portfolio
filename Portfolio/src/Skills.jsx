@@ -3,7 +3,7 @@ import "./Skills.css";
 const skillGroups = [
   {
     label: "Languages",
-    skills: ["Python", "C", "Java", "JavaScript", "Node.js", "SQL"],
+    skills: ["Python", "C", "Java", "JavaScript", "Node.js", "SQL", "Bash"],
   },
   {
     label: "DevOps / Cloud",
@@ -11,7 +11,7 @@ const skillGroups = [
   },
   {
     label: "Security",
-    skills: ["Splunk", "Wireshark", "Trivy", "Checkov", "MITRE ATT&CK"],
+    skills: ["Splunk", "Wireshark", "Trivy", "Checkov", "MITRE ATT&CK", "SIEM"],
   },
   {
     label: "Frameworks",
@@ -19,7 +19,15 @@ const skillGroups = [
   },
 ];
 
+function formatServiceDate(date = new Date()) {
+  const weekday = date.toLocaleDateString("en-US", { weekday: "short" });
+  const iso = date.toISOString().slice(0, 10);
+  return `${weekday} ${iso}`;
+}
+
 const Skills = () => {
+  const activeSince = formatServiceDate();
+
   return (
     <section className="skills-container" id="skills">
       <div className="terminal-window">
@@ -51,14 +59,14 @@ const Skills = () => {
           </div>
           <div className="output-line">
             <span className="label"> Active:</span>{" "}
-            <span className="active-text">active (running)</span> since Wed
-            2026-07-29
+            <span className="active-text">active (running)</span> since{" "}
+            {activeSince}
           </div>
           <div className="output-line">
             <span className="label"> Main PID:</span> 2028 (stony-brook-uni)
           </div>
           <div className="output-line">
-            <span className="label"> Memory:</span> 3.66G (GPA)
+            <span className="label"> Memory:</span> 3.68G (GPA)
           </div>
           <div className="output-line">
             <span className="label"> CGroup:</span>{" "}

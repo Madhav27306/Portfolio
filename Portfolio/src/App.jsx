@@ -4,15 +4,16 @@ import Navbar from './Navbar';
 import Hero from './Hero';
 import Showcase from './Showcase';
 import Skills from './Skills';
+import Education from './Education';
 import Footer from './Footer';
 import './App.css';
 
 function App() {
-  
+
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2, 
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
     });
 
@@ -34,8 +35,9 @@ function App() {
       <Hero />
       <Showcase />
       <Skills />
+      <Education />
       <Footer />
-      
+
     </>
   );
 }

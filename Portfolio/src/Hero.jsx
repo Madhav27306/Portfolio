@@ -16,9 +16,7 @@ const Hero = () => {
         {/* Availability Pill */}
         <div className="status-pill">
           <span className="pulse-dot"></span>
-          <span className="status-text">
-            Available Fall 2026 / Summer 2027
-          </span>
+          <span className="status-text">Available Summer 2027</span>
         </div>
 
         <h1
